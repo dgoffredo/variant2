@@ -6,7 +6,7 @@
 #include <vector>
 
 template <typename variant_t>
-void visit(const variant_t variant) {
+void visit(const variant_t& variant) {
     variant.visit([](const std::string& s) {
         std::cout << "it's a string: " << s << "\n";
     },
